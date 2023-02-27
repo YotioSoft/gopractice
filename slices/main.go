@@ -73,6 +73,22 @@ func main() {
 
 	f := e[2:5]
 	printSlice(f)
+
+	// スライスへ新しい要素を追加
+	var u []int
+	printSlice(u)
+
+	// append works on nil slices.
+	u = append(u, 0)
+	printSlice(u)
+
+	// The slice grows as needed.
+	u = append(u, 1)
+	printSlice(u)
+
+	// We can add more then one element at a time.
+	u = append(u, 2, 3, 4)
+	printSlice(u)
 }
 
 func printSlice(s []int) {
